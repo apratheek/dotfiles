@@ -63,11 +63,11 @@ ln -s ~/Dev/dotfiles/nvim/init.vim ~/.config/nvim/init.vim
 ln -s ~/Dev/dotfiles/nvim/coc-settings.json ~/.config/nvim/coc-settings.json
 ```
 
-## Langauge Servers
+## Language Servers
 1. Docker
 ```bash
 sudo npm install -g dockerfile-language-server-nodejs
 ```
 
-## Install Go
+## Setup for Go
 1. Once neovim initializes, run `:GoInstallBinaries` for the first time. Each new neovim open would automatically update the binaries
