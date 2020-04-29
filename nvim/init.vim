@@ -16,6 +16,9 @@ filetype plugin indent on
 " Security
 set modelines=0
 
+" Set neovim's updatetime
+set updatetime=100
+
 " Show hybrid line numbers
 set number relativenumber
 
@@ -170,12 +173,69 @@ map <leader>l :set list!<CR> " Toggle tabs and EOL
 iabbrev teh the
 
 " Plugins here
+call plug#begin()
+Plug 'drewtempelmeyer/palenight.vim'
+" Plug 'morhetz/gruvbox'
+
+Plug 'vim-airline/vim-airline'
+Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'jiangmiao/auto-pairs'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 
 
+
+" Keep this at the last
+Plug 'ryanoasis/vim-devicons'
+call plug#end()
 
 
 
 
 
 " Plugin specific rules
+
+" **********************************************************
+" Theme
+set background=dark
+colorscheme palenight
+let g:palenight_terminal_italics=1
+" **********************************************************
+
+" vim-airline
+let g:airline_theme = "palenight"
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'default'
+let g:airline_powerline_fonts = 1
+
+"***********************************************************
+" vim-gitgutter
+" Turn on line highlighting by default
+let g:gitgutter_highlight_lines = 0
+" Turn on line number highlighting by default
+let g:gitgutter_highlight_linenrs = 1
+"***********************************************************
+
+"***********************************************************
+" fzf
+" Empty value to disable preview window altogether
+" let g:fzf_preview_window = ''
+
+" Always enable preview window on the right with 60% width
+let g:fzf_preview_window = 'right:60%'
+
+" [Buffers] Jump to the existing window if possible
+let g:fzf_buffers_jump = 1
+
+" [[B]Commits] Customize the options used by 'git log':
+let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr"'
+
+" [Tags] Command to generate tags file
+let g:fzf_tags_command = 'ctags -R'
+
+" [Commands] --expect expression for directly executing the command
+let g:fzf_commands_expect = 'alt-enter,ctrl-x'
+"***********************************************************

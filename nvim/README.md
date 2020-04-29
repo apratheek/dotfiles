@@ -28,6 +28,17 @@ mkdir ~/.config/nvim
 mkdir ~/.config/nvim/undodir
 ```
 
+6. Install `vim-plug`
+```bash
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+7. Install Neovim Python Module
+```bash
+sudo pip3 install --user neovim
+sudo pip install --user neovim
+```
+
 ## Neovim config
 1. Create a symbolic link. Neovim looks for configuration file in `~/.config/nvim/init.vim`
 
@@ -38,3 +49,11 @@ ln -s init.vim ~/.config/nvim/init.vim
 ## Prior dependencies for some plugins
 
 1. `yarn` for coc.nvim
+2. `ripgrep` for `fzf`
+```bash
+# Install via rust
+cargo install ripgrep
+
+# Install on Ubuntu >= 18.10
+sudo apt install ripgrep
+```
