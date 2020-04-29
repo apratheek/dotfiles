@@ -186,6 +186,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 Plug 'mhinz/vim-startify'
+Plug 'MattesGroeger/vim-bookmarks'
 
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -242,6 +243,12 @@ let g:fzf_tags_command = 'ctags -R'
 
 " [Commands] --expect expression for directly executing the command
 let g:fzf_commands_expect = 'alt-enter,ctrl-x'
+"***********************************************************
+
+"***********************************************************
+" vim-bookmarks
+let g:bookmark_save_per_working_dir = 1
+let g:bookmark_auto_save = 1
 "***********************************************************
 
 "***********************************************************
