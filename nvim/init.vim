@@ -189,6 +189,12 @@ Plug 'mhinz/vim-startify'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'ervandew/supertab'
 
+Plug 'tpope/tpope-vim-abolish'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-obsession'
+
+Plug 'simnalamburt/vim-mundo'
+
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'vwxyutarooo/nerdtree-devicons-syntax'
@@ -256,3 +262,12 @@ let g:bookmark_auto_save = 1
 " NERDTree
 " autocmd vimenter * NERDTree " Disabling this owing to vim-startify handling the start screen
 "***********************************************************
+
+
+
+
+
+
+
+" TODO
+" 1. Configure vim-obsession with airline -> display the current session on Airline (https://github.com/vim-airline/vim-airline#fine-tuned-configuration and https://dockyard.com/blog/2019/06/25/simple-vim-session-management-part-2)
