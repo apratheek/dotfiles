@@ -57,3 +57,6 @@ cargo install ripgrep
 # Install on Ubuntu >= 18.10
 sudo apt install ripgrep
 ```
+
+## Install Go
+1. Once neovim initializes, run `:GoInstallBinaries` for the first time. Each new neovim open would automatically update the binaries

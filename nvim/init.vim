@@ -51,33 +51,33 @@ set autoindent
 set smarttab
 
 " Func for defining the tablabel
-function! Tabline()
-  let s = ''
-  for i in range(tabpagenr('$'))
-    let tab = i + 1
-    let winnr = tabpagewinnr(tab)
-    let buflist = tabpagebuflist(tab)
-    let bufnr = buflist[winnr - 1]
-    let bufname = bufname(bufnr)
-    let bufmodified = getbufvar(bufnr, "&mod")
+" function! Tabline()
+"   let s = ''
+"   for i in range(tabpagenr('$'))
+"     let tab = i + 1
+"     let winnr = tabpagewinnr(tab)
+"     let buflist = tabpagebuflist(tab)
+"     let bufnr = buflist[winnr - 1]
+"     let bufname = bufname(bufnr)
+"     let bufmodified = getbufvar(bufnr, "&mod")
 
-    let s .= '%' . tab . 'T'
-    let s .= (tab == tabpagenr() ? '%#TabLineSel#' : '%#TabLine#')
-    let s .= ' ' . tab .':'
-    let s .= (bufname != '' ? '['. fnamemodify(bufname, ':t') . '] ' : '[No Name] ')
+"     let s .= '%' . tab . 'T'
+"     let s .= (tab == tabpagenr() ? '%#TabLineSel#' : '%#TabLine#')
+"     let s .= ' ' . tab .':'
+"     let s .= (bufname != '' ? '['. fnamemodify(bufname, ':t') . '] ' : '[No Name] ')
 
-    if bufmodified
-      let s .= '[+] '
-    endif
-  endfor
+"     if bufmodified
+"       let s .= '[+] '
+"     endif
+"   endfor
 
-  let s .= '%#TabLineFill#'
-  if (exists("g:tablineclosebutton"))
-    let s .= '%=%999XX'
-  endif
-  return s
-endfunction
-set tabline=%!Tabline()
+"   let s .= '%#TabLineFill#'
+"   if (exists("g:tablineclosebutton"))
+"     let s .= '%=%999XX'
+"   endif
+"   return s
+" endfunction
+" set tabline=%!Tabline()
 
 
 " Vertical/Horizontal scroll off settings
@@ -203,6 +203,9 @@ Plug 'simnalamburt/vim-mundo'
 Plug 'luochen1990/rainbow'
 Plug 'nathanaelkane/vim-indent-guides'
 
+" Go
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'vwxyutarooo/nerdtree-devicons-syntax'
@@ -288,6 +291,15 @@ let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowTo
 let g:indent_guides_enable_on_vim_startup = 1
 "***********************************************************
 
+"***********************************************************
+" vim-go plugin specific commands
+" Also run `goimports` on your current file on every save
+" Might be be slow on large codebases, if so, just comment it out
+let g:go_fmt_command = "goimports"
+
+" Status line types/signatures.
+let g:go_auto_type_info = 1
+"***********************************************************
 
 "***********************************************************
 " NERDTree
