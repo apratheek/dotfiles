@@ -39,13 +39,6 @@ sudo pip3 install --user neovim
 sudo pip install --user neovim
 ```
 
-## Neovim config
-1. Create a symbolic link. Neovim looks for configuration file in `~/.config/nvim/init.vim`
-
-```bash
-ln -s init.vim ~/.config/nvim/init.vim
-```
-
 ## Prior dependencies for some plugins
 
 1. `yarn` for coc.nvim
@@ -56,6 +49,24 @@ cargo install ripgrep
 
 # Install on Ubuntu >= 18.10
 sudo apt install ripgrep
+```
+
+## Neovim config
+1. Create a symbolic link. Neovim looks for configuration file in `~/.config/nvim/init.vim`
+
+```bash
+ln -s ~/Dev/dotfiles/nvim/init.vim ~/.config/nvim/init.vim
+```
+
+2. Create a symbolic link for `coc-settings.json`. This is for `coc.nvim`.
+```bash
+ln -s ~/Dev/dotfiles/nvim/coc-settings.json ~/.config/nvim/coc-settings.json
+```
+
+## Langauge Servers
+1. Docker
+```bash
+sudo npm install -g dockerfile-language-server-nodejs
 ```
 
 ## Install Go
