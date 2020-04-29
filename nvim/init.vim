@@ -198,6 +198,7 @@ Plug 'tpope/vim-obsession'
 
 Plug 'simnalamburt/vim-mundo'
 Plug 'luochen1990/rainbow'
+Plug 'nathanaelkane/vim-indent-guides'
 
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -277,6 +278,11 @@ let g:bookmark_auto_save = 1
 "***********************************************************
 " rainbow
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
+"***********************************************************
+
+"***********************************************************
+" vim-indent-guides
+let g:indent_guides_enable_on_vim_startup = 1
 "***********************************************************
 
 
