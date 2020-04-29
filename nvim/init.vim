@@ -187,6 +187,7 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'mhinz/vim-startify'
 Plug 'MattesGroeger/vim-bookmarks'
+Plug 'ervandew/supertab'
 
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
