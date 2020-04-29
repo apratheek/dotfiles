@@ -185,7 +185,11 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
+Plug 'mhinz/vim-startify'
 
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'vwxyutarooo/nerdtree-devicons-syntax'
 
 
 " Keep this at the last
@@ -238,4 +242,9 @@ let g:fzf_tags_command = 'ctags -R'
 
 " [Commands] --expect expression for directly executing the command
 let g:fzf_commands_expect = 'alt-enter,ctrl-x'
+"***********************************************************
+
+"***********************************************************
+" NERDTree
+" autocmd vimenter * NERDTree " Disabling this owing to vim-startify handling the start screen
 "***********************************************************
