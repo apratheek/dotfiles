@@ -168,6 +168,9 @@ set listchars=tab:▸\ ,eol:¬,trail:•,extends:#,nbsp:.
 " Or use your leader key + l to toggle on/off
 map <leader>l :set list!<CR> " Toggle tabs and EOL
 
+" Clear previous search highlight on click of escape
+nnoremap <esc> :noh<return><esc>
+
 
 " Spell check
 iabbrev teh the
