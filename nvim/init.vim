@@ -47,6 +47,35 @@ set noshiftround
 set autoindent
 set smarttab
 
+" Func for defining the tablabel
+function! Tabline()
+  let s = ''
+  for i in range(tabpagenr('$'))
+    let tab = i + 1
+    let winnr = tabpagewinnr(tab)
+    let buflist = tabpagebuflist(tab)
+    let bufnr = buflist[winnr - 1]
+    let bufname = bufname(bufnr)
+    let bufmodified = getbufvar(bufnr, "&mod")
+
+    let s .= '%' . tab . 'T'
+    let s .= (tab == tabpagenr() ? '%#TabLineSel#' : '%#TabLine#')
+    let s .= ' ' . tab .':'
+    let s .= (bufname != '' ? '['. fnamemodify(bufname, ':t') . '] ' : '[No Name] ')
+
+    if bufmodified
+      let s .= '[+] '
+    endif
+  endfor
+
+  let s .= '%#TabLineFill#'
+  if (exists("g:tablineclosebutton"))
+    let s .= '%=%999XX'
+  endif
+  return s
+endfunction
+set tabline=%!Tabline()
+
 
 " Vertical/Horizontal scroll off settings
 set scrolloff=3     " The number of screen lines to keep above and below the cursor
@@ -89,6 +118,10 @@ set showmode
 set showcmd
 "store lots of :cmdline history
 set history=1000
+
+" Persistent undo
+set undofile " Maintain undo history between sessions
+set undodir=~/.config/nvim/undodir " This is the directory in which the undofiles are stored (only if the dir exists; need to create it otherwise)
 
 " Share vim's clipboard with the OS clipboard - this enable copy-paste between vim and the OS
 set clipboard+=unnamedplus

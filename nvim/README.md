@@ -16,6 +16,17 @@ sudo cp -r ../fonts/truetype/ /usr/local/share/fonts/
 1. Download [neovim](https://github.com/neovim/neovim/releases) (on linux, as an AppImage).
 2. Mark it as executable (chmod +x nvim.appimage).
 3. Copy it into `$PATH` and preferably, remove the `.appimage` suffix.
+4. Create a directory for neovim's `.vim` file
+
+```bash
+mkdir ~/.config/nvim
+```
+
+5. Create an optional undo directory if you want persistent undo
+
+```bash
+mkdir ~/.config/nvim/undodir
+```
 
 ## Neovim config
 1. Create a symbolic link. Neovim looks for configuration file in `~/.config/nvim/init.vim`
