@@ -197,6 +197,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-obsession'
 
 Plug 'simnalamburt/vim-mundo'
+Plug 'luochen1990/rainbow'
 
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -272,6 +273,12 @@ let g:fzf_commands_expect = 'alt-enter,ctrl-x'
 let g:bookmark_save_per_working_dir = 1
 let g:bookmark_auto_save = 1
 "***********************************************************
+
+"***********************************************************
+" rainbow
+let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
+"***********************************************************
+
 
 "***********************************************************
 " NERDTree
