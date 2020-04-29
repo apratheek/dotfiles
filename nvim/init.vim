@@ -90,6 +90,9 @@ set showcmd
 "store lots of :cmdline history
 set history=1000
 
+" Share vim's clipboard with the OS clipboard - this enable copy-paste between vim and the OS
+set clipboard+=unnamedplus
+
 " set mouse=a     " Enable mouse usage (all modes)
 
 " Highlight the line on which the cursor is placed
