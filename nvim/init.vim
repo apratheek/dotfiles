@@ -180,8 +180,9 @@ call plug#begin()
 
 Plug 'unblevable/quick-scope'
 
-Plug 'drewtempelmeyer/palenight.vim'
+" Plug 'drewtempelmeyer/palenight.vim'
 " Plug 'morhetz/gruvbox'
+Plug 'tomasiser/vim-code-dark'
 
 Plug 'vim-airline/vim-airline'
 Plug 'sheerun/vim-polyglot'
@@ -200,7 +201,8 @@ Plug 'tpope/vim-obsession'
 
 Plug 'simnalamburt/vim-mundo'
 Plug 'luochen1990/rainbow'
-Plug 'nathanaelkane/vim-indent-guides'
+" Plug 'nathanaelkane/vim-indent-guides'
+Plug 'terryma/vim-multiple-cursors'
 
 " Go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -212,6 +214,11 @@ Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'vwxyutarooo/nerdtree-devicons-syntax'
 
+
+" Highlight words that are similar to the word under the cursor
+" Plug 'dominikduda/vim_current_word'
+" Plug 'rrethy/vim-illuminate'
+Plug 'mrded/vim-hi-cursor-words'
 
 " Keep this at the last
 Plug 'ryanoasis/vim-devicons'
@@ -235,14 +242,15 @@ augroup END
 " **********************************************************
 " Theme
 set background=dark
-colorscheme palenight
-let g:palenight_terminal_italics=1
+colorscheme codedark
+" let g:palenight_terminal_italics=1
 " **********************************************************
 
 " vim-airline
-let g:airline_theme = "palenight"
+let g:airline_theme = "codedark"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'default'
+let g:airline#extensions#tabline#tab_nr_type = 1 " Show tab number
 let g:airline_powerline_fonts = 1
 
 "***********************************************************
@@ -287,7 +295,7 @@ let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowTo
 
 "***********************************************************
 " vim-indent-guides
-let g:indent_guides_enable_on_vim_startup = 1
+" let g:indent_guides_enable_on_vim_startup = 1
 "***********************************************************
 
 "***********************************************************
@@ -319,7 +327,6 @@ let g:coc_global_extensions = [
 \ 'coc-eslint', 
 \ 'coc-yaml', 
 \ 'coc-json', 
-\ 'coc-sources', 
 \ 'coc-css', 
 \ 'coc-highlight', 
 \ 'coc-html', 
