@@ -266,6 +266,8 @@ let g:gitgutter_highlight_linenrs = 1
 " Empty value to disable preview window altogether
 " let g:fzf_preview_window = ''
 
+" Use ripgrep for searching -> will ignore files with entries in .gitignore
+let $FZF_DEFAULT_COMMAND = 'rg --files'
 " Always enable preview window on the right with 60% width
 let g:fzf_preview_window = 'right:60%'
 
@@ -280,6 +282,9 @@ let g:fzf_tags_command = 'ctags -R'
 
 " [Commands] --expect expression for directly executing the command
 let g:fzf_commands_expect = 'alt-enter,ctrl-x'
+
+" Use Ctrl+ to search for files using FZF
+nnoremap <C-p> :<C-u>FZF<CR>
 "***********************************************************
 
 "***********************************************************
