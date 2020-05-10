@@ -161,8 +161,8 @@ vnoremap <F1> :set invfullscreen<CR>
 map <leader>q gqip
 
 " Visualize tabs and newlines
-set list
-set listchars=tab:▸\ ,eol:¬,trail:•,extends:#,nbsp:.
+" set list
+" set listchars=tab:▸\ ,eol:¬,trail:•,extends:#,nbsp:.
 " Uncomment this to enable by default:
 " set list " To enable by default
 " Or use your leader key + l to toggle on/off
@@ -256,9 +256,10 @@ let g:airline_powerline_fonts = 1
 "***********************************************************
 " vim-gitgutter
 " Turn on line highlighting by default
-let g:gitgutter_highlight_lines = 0
+let g:gitgutter_highlight_lines = 1
 " Turn on line number highlighting by default
 let g:gitgutter_highlight_linenrs = 1
+let g:gitgutter_set_sign_backgrounds = 1
 "***********************************************************
 
 "***********************************************************
