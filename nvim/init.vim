@@ -208,7 +208,9 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " CoC
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Loading a specific commit since newer commits fail with gopls
+Plug 'neoclide/coc.nvim', { 'commit': '030aef2f6d', 'do': 'yarn install --frozen-lockfile' }
 
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
