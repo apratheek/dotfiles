@@ -202,7 +202,8 @@ Plug 'tpope/vim-obsession'
 Plug 'simnalamburt/vim-mundo'
 Plug 'luochen1990/rainbow'
 " Plug 'nathanaelkane/vim-indent-guides'
-Plug 'terryma/vim-multiple-cursors'
+" Plug 'terryma/vim-multiple-cursors'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 " Go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
